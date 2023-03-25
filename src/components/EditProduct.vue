@@ -28,7 +28,7 @@
                     <div class="text-h6">Variants</div>
                     <v-btn color="#0a89d0" prepend-icon=" mdi-plus" variant="text" @click="addVariant()">Add Variant</v-btn>
                 </div>
-                <v-expansion-panels multiple=true>
+                <v-expansion-panels multiple>
                     <v-expansion-panel v-for="(variant, index) in product.variants" :key="index">
                         <v-expansion-panel-title>
                             {{ variant.name }}
