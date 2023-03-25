@@ -140,7 +140,7 @@ export default {
             fetch(url, config)
                 .then(res => res.json())
                 .then(data => this.product = data)
-                .catch(err => console.log(err));
+                .catch(err => { console.log(err); alert(err) });
         },
         updateProduct() {
             const invalidVariant = this.product.variants.find(variant => {
@@ -161,7 +161,7 @@ export default {
             }
             fetch(url, config)
                 .then(res => this.successSnackbar = res.status == 200)
-                .catch(err => console.log(err));
+                .catch(err => { console.log(err); alert(err) });
         },
         addVariant() {
             if (!this.product.variants.find(variant => variant.price == 0 || variant.scriptId == 0)) {
